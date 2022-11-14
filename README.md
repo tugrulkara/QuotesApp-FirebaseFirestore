@@ -18,7 +18,7 @@
 
 *author and categories*
 
-*search for quotes*
+*search for quotes (searchview)*
 
 ## Installation
 
@@ -35,6 +35,17 @@
 **Firestore structure**
 
 ![ice_video_20221114-230825(1)](https://user-images.githubusercontent.com/74429693/201757416-ccf14ef9-ccdd-47bc-a28e-f93410eb3c8a.gif)
+
+**VARIABLES**
+
+**String:**
+*versionCode, auth_id, auth_name, cat_id, cat_name, popular(category), quote_id, quote_name, image, uuid, quote*
+
+**Timestamp:**
+*timestamp, date*
+
+**Number:**
+*popular(QuoteImageList)*
 
 ## Built With
 This app is developed using Java.
