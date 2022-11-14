@@ -25,3 +25,12 @@
 *1. Create database in FirestoreDatabase*
 
 *2. https://firebase.google.com/docs/android/setup?authuser=0&hl=en --- follow the steps here*
+
+**Move your config file into the module (app-level) root directory of your app. (google-services.json)**
+
+![Ekran Alıntısı](https://user-images.githubusercontent.com/74429693/201753476-43b3744e-467a-4c74-bb0a-dfdeb2244721.PNG)
+
+**Firestore structure**
+
+
+
