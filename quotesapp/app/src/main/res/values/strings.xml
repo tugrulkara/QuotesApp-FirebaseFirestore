@@ -37,12 +37,6 @@
     <string name="reload">Tekrar yükle</string>
 
     //AdmobId
-    <string name="HomePageBanner">ca-app-pub-5630234772229524/8583014407</string>
-    <string name="HomePageGecis">ca-app-pub-5630234772229524/3135725539</string>
-    <string name="MainBanner">ca-app-pub-5630234772229524/9509562192</string>
-    <string name="MainGecis">ca-app-pub-5630234772229524/1631072170</string>
-    <string name="QuotesGecis">ca-app-pub-5630234772229524/6500255471</string>
-    <string name="Reward">ca-app-pub-5630234772229524/9992949366</string>
 
     //TestId
     <string name="testBanner">ca-app-pub-3940256099942544/6300978111</string>
