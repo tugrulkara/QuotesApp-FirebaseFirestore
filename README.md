@@ -22,9 +22,11 @@
 
 ## Installation
 
-*1. Create database in FirestoreDatabase*
+*1. Create a Firebase project*
 
-*2. https://firebase.google.com/docs/android/setup?authuser=0&hl=en --- follow the steps here*
+*2. Create database in FirestoreDatabase*
+
+*3. Register your app with Firebase --> https://firebase.google.com/docs/android/setup?authuser=0&hl=en --- follow the steps here*
 
 **Move your config file into the module (app-level) root directory of your app. (google-services.json)**
 
@@ -32,5 +34,9 @@
 
 **Firestore structure**
 
+![ice_video_20221114-230825(1)](https://user-images.githubusercontent.com/74429693/201757416-ccf14ef9-ccdd-47bc-a28e-f93410eb3c8a.gif)
 
+## Built With
+This app is developed using Java.
 
+Hope it helps :)
