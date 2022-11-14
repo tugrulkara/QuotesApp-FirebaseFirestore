@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">ALLıntı: alıntılar ve sözler</string>
+    <string name="header_app_name">ALLıntı: alıntılar ve sözler</string>
+    <string name="conne_msg1">Ağ Bağlantısı Yok!!!</string>
+    <string name="drawer_open">Drawer Open</string>
+    <string name="drawer_close">Drawer Close</string>
+
+    <string name="home_page">Anasayfa</string>
+    <string name="menu_quotes">Alıntılar</string>
+    <string name="menu_author">Kişiler</string>
+    <string name="menu_category">Kategoriler</string>
+    <string name="menu_favorites">Favoriler</string>
+    <string name="menu_quotes_maker">Resimli Alıntı Oluştur</string>
+    <string name="menu_settings">Ayarlar</string>
+    <string name="settings_notification">Bildirimler</string>
+    <string name="settings_rate">Bizi puanlayın</string>
+    <string name="settings_share">Bizi paylaşın</string>
+    <string name="settings_privacy">Gizlilik politikası</string>
+    <string name="settings_contact">Bizimle iletişime geçin</string>
+    <string name="settings_app_version">V2.4</string>
+    <string name="versionCode">15</string>
+    <string name="settings_app_developer">TK-2022</string>
+    <string name="menu_log_out">Çıkış</string>
+    <string name="logout_msg">Çıkış yapmak istediğinizden emin misiniz?</string>
+    <string name="back_key">Çıkmak için lütfen GERİ yi tekrar tıklayın</string>
+
+    <string name="download_this_app">"ALLıntı'yı Google Play üzerinden ücretsiz indirebilirsiniz http://bit.do/tgrlkrquotesapp"</string>
+    <string name="share_this_app">Uygulamayı paylaş</string>
+    <string name="copy_to_clipboard">Alıntı panoya kopyalandı.</string>
+    <string name="add_favorite">Favorilere Eklendi</string>
+    <string name="remove_favorite">Favorilerden Çıkarıldı</string>
+    <string name="share">Paylaş</string>
+
+    <string name="quote_of_the_day">Günün Alıntısı</string>
+    <string name="quote_maker">Resimli Alıntı Oluştur</string>
+
+    <string name="reload">Tekrar yükle</string>
+
+    //AdmobId
+    <string name="HomePageBanner">ca-app-pub-5630234772229524/8583014407</string>
+    <string name="HomePageGecis">ca-app-pub-5630234772229524/3135725539</string>
+    <string name="MainBanner">ca-app-pub-5630234772229524/9509562192</string>
+    <string name="MainGecis">ca-app-pub-5630234772229524/1631072170</string>
+    <string name="QuotesGecis">ca-app-pub-5630234772229524/6500255471</string>
+    <string name="Reward">ca-app-pub-5630234772229524/9992949366</string>
+
+    //TestId
+    <string name="testBanner">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="testGecis">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="testReward">ca-app-pub-3940256099942544/5224354917</string>
+
+</resources>

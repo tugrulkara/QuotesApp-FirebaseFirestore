@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/quotes_nav_bottom"
+        android:title="@string/menu_quotes"
+        android:icon="@drawable/quotes"/>
+    <item
+        android:id="@+id/authors_nav_bottom"
+        android:title="@string/menu_author"
+        android:icon="@drawable/authors"/>
+    <item
+        android:id="@+id/category_nav_bottom"
+        android:title="@string/menu_category"
+        android:icon="@drawable/category"/>
+    <item
+        android:id="@+id/favorites_nav_bottom"
+        android:title="@string/menu_favorites"
+        android:icon="@drawable/ic_baseline_favorite"/>
+
+</menu>
