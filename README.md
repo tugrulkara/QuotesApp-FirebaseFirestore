@@ -17,8 +17,9 @@ This repository contains code samples for Firestore.*
 
 ## Features
 
-*CRUD*
-*author-category-quote*
+*CRUD author-category-quote*
+
+*Firebase Messaging-Notification*
 
 *add quotes to favorites*
 
