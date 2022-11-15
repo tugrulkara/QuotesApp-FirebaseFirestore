@@ -19,6 +19,20 @@
         <entry key="..\:/Users/Tugrul/AndroidStudioProjects/quotesapp/app/src/main/res/menu/menu_drawer.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Tugrul/AndroidStudioProjects/quotesapp/app/src/main/res/menu/menu_quote_maker.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Tugrul/AndroidStudioProjects/quotesapp/app/src/main/res/menu/menu_search.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Tugrul/Documents/GitHub/QuotesApp-FirebaseFirestore/quotesapp/app/src/main/res/drawable/private_pol.xml" value="0.203" />
+        <entry key="..\:/Users/Tugrul/Documents/GitHub/QuotesApp-FirebaseFirestore/quotesapp/app/src/main/res/drawable/settings.xml" value="0.203" />
+        <entry key="..\:/Users/Tugrul/Documents/GitHub/QuotesApp-FirebaseFirestore/quotesapp/app/src/main/res/layout-v21/slider_item.xml" value="0.16052631578947368" />
+        <entry key="..\:/Users/Tugrul/Documents/GitHub/QuotesApp-FirebaseFirestore/quotesapp/app/src/main/res/layout/activity_filter_quotes.xml" value="0.16052631578947368" />
+        <entry key="..\:/Users/Tugrul/Documents/GitHub/QuotesApp-FirebaseFirestore/quotesapp/app/src/main/res/layout/activity_main.xml" value="0.10328947368421053" />
+        <entry key="..\:/Users/Tugrul/Documents/GitHub/QuotesApp-FirebaseFirestore/quotesapp/app/src/main/res/layout/activity_slider_detail.xml" value="0.16052631578947368" />
+        <entry key="..\:/Users/Tugrul/Documents/GitHub/QuotesApp-FirebaseFirestore/quotesapp/app/src/main/res/layout/add_text_dialog.xml" value="0.16052631578947368" />
+        <entry key="..\:/Users/Tugrul/Documents/GitHub/QuotesApp-FirebaseFirestore/quotesapp/app/src/main/res/layout/fragment_quotes.xml" value="0.16052631578947368" />
+        <entry key="..\:/Users/Tugrul/Documents/GitHub/QuotesApp-FirebaseFirestore/quotesapp/app/src/main/res/layout/image_item.xml" value="0.16052631578947368" />
+        <entry key="..\:/Users/Tugrul/Documents/GitHub/QuotesApp-FirebaseFirestore/quotesapp/app/src/main/res/layout/left_nav_header.xml" value="0.16052631578947368" />
+        <entry key="..\:/Users/Tugrul/Documents/GitHub/QuotesApp-FirebaseFirestore/quotesapp/app/src/main/res/layout/row_all_quotes.xml" value="0.16052631578947368" />
+        <entry key="..\:/Users/Tugrul/Documents/GitHub/QuotesApp-FirebaseFirestore/quotesapp/app/src/main/res/layout/row_item.xml" value="0.16052631578947368" />
+        <entry key="..\:/Users/Tugrul/Documents/GitHub/QuotesApp-FirebaseFirestore/quotesapp/app/src/main/res/layout/row_toolbar.xml" value="0.16052631578947368" />
+        <entry key="..\:/Users/Tugrul/Documents/GitHub/QuotesApp-FirebaseFirestore/quotesapp/app/src/main/res/menu/menu_all_quotes.xml" value="0.16052631578947368" />
       </map>
     </option>
   </component>

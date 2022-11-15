@@ -4,7 +4,6 @@ import static android.content.pm.PackageManager.PERMISSION_GRANTED;
 import static com.tugrulkara.quotesapp.util.FileSaveHelper.isSdkHigherThan28;
 
 import android.Manifest;
-import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Color;
@@ -85,7 +84,9 @@ public class QuotesMakerActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quotes_maker);
 
-        Appodeal.initialize(this, "ee3effe77385b6d328109a32393480096104d245dff12b24", Appodeal.REWARDED_VIDEO, true);
+
+        //appodeal ads install
+        Appodeal.initialize(this, "adsid", Appodeal.REWARDED_VIDEO, true);
         Appodeal.isLoaded(Appodeal.REWARDED_VIDEO);
         Appodeal.setRewardedVideoCallbacks(new RewardedVideoCallbacks() {
             @Override
@@ -208,7 +209,8 @@ public class QuotesMakerActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 //showReward();
-                Appodeal.show(QuotesMakerActivity.this, Appodeal.REWARDED_VIDEO);
+                //Appodeal.show(QuotesMakerActivity.this, Appodeal.REWARDED_VIDEO);
+                saveImage();
             }
         });
 
@@ -392,11 +394,8 @@ public class QuotesMakerActivity extends BaseActivity {
         }
     }
 
-    private void appodealLoadAd(){
 
-
-    }
-
+    //ADMOB REWARDED
     private void loadAd(){
 
         AdRequest adRequest = new AdRequest.Builder().build();

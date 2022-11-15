@@ -135,6 +135,7 @@ public class FilterQuotesActivity extends AppCompatActivity {
         return super.onCreateOptionsMenu(menu);
     }
 
+    //query by author
     public void authToQuotesGetData(String info){
 
         firebaseFirestore.collection("Quote")
@@ -181,6 +182,7 @@ public class FilterQuotesActivity extends AppCompatActivity {
 
     }
 
+    //query by category
     private void catToQuotesGetData(String info){
 
         firebaseFirestore.collection("Quote")

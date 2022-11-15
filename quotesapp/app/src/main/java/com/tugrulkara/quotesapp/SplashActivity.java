@@ -56,6 +56,8 @@ public class SplashActivity extends AppCompatActivity {
         }, SPLASH_DURATION);
     }
 
+
+    //App Update Controller
     public void updateController(){
 
         firebaseFirestore.collection("AppUpdateController")

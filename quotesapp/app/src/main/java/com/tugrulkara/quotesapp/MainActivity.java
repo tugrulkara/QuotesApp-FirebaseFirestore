@@ -46,9 +46,6 @@ import com.tugrulkara.quotesapp.util.AlarmReceiver;
 
 import java.util.Arrays;
 import java.util.Calendar;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ScheduledExecutorService;
-import java.util.concurrent.TimeUnit;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -69,9 +66,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Appodeal.initialize(this, "ee3effe77385b6d328109a32393480096104d245dff12b24", Appodeal.BANNER | Appodeal.INTERSTITIAL, true);
+
+        //appodeal ads install
+        Appodeal.initialize(this, "adsid", Appodeal.BANNER | Appodeal.INTERSTITIAL, true);
         Appodeal.setBannerViewId(R.id.appodealBannerView);
-        Appodeal.show(this, Appodeal.BANNER_VIEW);
+        //Appodeal.show(this, Appodeal.BANNER_VIEW);
         Appodeal.isLoaded(Appodeal.INTERSTITIAL);
         Appodeal.setInterstitialCallbacks(new InterstitialCallbacks() {
             @Override
@@ -113,6 +112,8 @@ public class MainActivity extends AppCompatActivity {
 
         Toast.makeText(MainActivity.this,"Yükleniyor...",Toast.LENGTH_LONG).show();
 
+
+        //admob install
         MobileAds.initialize(this, new OnInitializationCompleteListener() {
             @Override
             public void onInitializationComplete(InitializationStatus initializationStatus) {
@@ -155,9 +156,6 @@ public class MainActivity extends AppCompatActivity {
         drawerLayout = findViewById(R.id.drawer_layout);
         fragmentManager = getSupportFragmentManager();
 
-        /*HomePageFragment homePageFragment = new HomePageFragment();
-        loadFrag(homePageFragment, getString(R.string.home_page), fragmentManager);*/
-
         QuotesFragment quotesFragment = new QuotesFragment();
         loadFrag(quotesFragment, getString(R.string.menu_quotes), fragmentManager);
 
@@ -178,7 +176,7 @@ public class MainActivity extends AppCompatActivity {
                         
                         if (mInterstitialLoaded){
                             //mInterstitialAd.show(MainActivity.this);
-                            Appodeal.show(MainActivity.this, Appodeal.INTERSTITIAL);
+                            //Appodeal.show(MainActivity.this, Appodeal.INTERSTITIAL);
                             mInterstitialLoaded=false;
                             QuotesFragment quotesFragment = new QuotesFragment();
                             navigationView.setCheckedItem(R.id.menu_add_quotes);
@@ -194,7 +192,7 @@ public class MainActivity extends AppCompatActivity {
 
                         if (mInterstitialLoaded) {
                             //mInterstitialAd.show(MainActivity.this);
-                            Appodeal.show(MainActivity.this, Appodeal.INTERSTITIAL);
+                            //Appodeal.show(MainActivity.this, Appodeal.INTERSTITIAL);
                             mInterstitialLoaded=false;
                             AuthorsFragment authorsFragment=new AuthorsFragment();
                             navigationView.setCheckedItem(R.id.menu_add_authors);
@@ -209,7 +207,7 @@ public class MainActivity extends AppCompatActivity {
 
                         if (mInterstitialLoaded) {
                             //mInterstitialAd.show(MainActivity.this);
-                            Appodeal.show(MainActivity.this, Appodeal.INTERSTITIAL);
+                            //Appodeal.show(MainActivity.this, Appodeal.INTERSTITIAL);
                             mInterstitialLoaded=false;
                             CategoryFragment categoryFragment=new CategoryFragment();
                             navigationView.setCheckedItem(R.id.menu_add_category);
@@ -224,7 +222,7 @@ public class MainActivity extends AppCompatActivity {
 
                         if (mInterstitialLoaded) {
                             //mInterstitialAd.show(MainActivity.this);
-                            Appodeal.show(MainActivity.this, Appodeal.INTERSTITIAL);
+                            //Appodeal.show(MainActivity.this, Appodeal.INTERSTITIAL);
                             mInterstitialLoaded=false;
                             FavoritesFragment favoritesFragment=new FavoritesFragment();
                             navigationView.setCheckedItem(R.id.menu_add_favorites);
@@ -246,68 +244,47 @@ public class MainActivity extends AppCompatActivity {
                 drawerLayout.closeDrawers();
                 switch (menuItem.getItemId()) {
 
-                    /*case R.id.home_page_nav_drawer:
-                        //HomePageFragment homePageFragment = new HomePageFragment();
-                        bottomNavigationView.setSelectedItemId(R.id.home_page_nav_bottom);
-                        //loadFrag(homePageFragment, getString(R.string.home_page), fragmentManager);
-                        return true;*/
                     case R.id.menu_add_quotes:
                         if (mInterstitialLoaded) {
                             //mInterstitialAd.show(MainActivity.this);
-                            Appodeal.show(MainActivity.this, Appodeal.INTERSTITIAL);
+                            //Appodeal.show(MainActivity.this, Appodeal.INTERSTITIAL);
                             mInterstitialLoaded=false;
-                            //QuotesFragment quotesFragment = new QuotesFragment();
                             bottomNavigationView.setSelectedItemId(R.id.quotes_nav_bottom);
-                            //loadFrag(quotesFragment, getString(R.string.menu_quotes), fragmentManager);
                         } else {
-                            //QuotesFragment quotesFragment = new QuotesFragment();
                             bottomNavigationView.setSelectedItemId(R.id.quotes_nav_bottom);
-                            //loadFrag(quotesFragment, getString(R.string.menu_quotes), fragmentManager);
                         }
 
                         return true;
                     case R.id.menu_add_authors:
                         if (mInterstitialLoaded) {
                             //mInterstitialAd.show(MainActivity.this);
-                            Appodeal.show(MainActivity.this, Appodeal.INTERSTITIAL);
+                            //Appodeal.show(MainActivity.this, Appodeal.INTERSTITIAL);
                             mInterstitialLoaded=false;
-                            //AuthorsFragment authorsFragment=new AuthorsFragment();
                             bottomNavigationView.setSelectedItemId(R.id.authors_nav_bottom);
-                            //loadFrag(authorsFragment, getString(R.string.menu_author), fragmentManager);
                         } else {
-                            //AuthorsFragment authorsFragment=new AuthorsFragment();
                             bottomNavigationView.setSelectedItemId(R.id.authors_nav_bottom);
-                            //loadFrag(authorsFragment, getString(R.string.menu_author), fragmentManager);
                         }
 
                         return true;
                     case R.id.menu_add_category:
                         if (mInterstitialLoaded) {
                             //mInterstitialAd.show(MainActivity.this);
-                            Appodeal.show(MainActivity.this, Appodeal.INTERSTITIAL);
+                            //Appodeal.show(MainActivity.this, Appodeal.INTERSTITIAL);
                             mInterstitialLoaded=false;
-                            //CategoryFragment categoryFragment=new CategoryFragment();
                             bottomNavigationView.setSelectedItemId(R.id.category_nav_bottom);
-                            //loadFrag(categoryFragment, getString(R.string.menu_category), fragmentManager);
                         } else {
-                            //CategoryFragment categoryFragment=new CategoryFragment();
                             bottomNavigationView.setSelectedItemId(R.id.category_nav_bottom);
-                            //loadFrag(categoryFragment, getString(R.string.menu_category), fragmentManager);
                         }
 
                         return true;
                     case R.id.menu_add_favorites:
                         if (mInterstitialLoaded) {
                             //mInterstitialAd.show(MainActivity.this);
-                            Appodeal.show(MainActivity.this, Appodeal.INTERSTITIAL);
+                            //Appodeal.show(MainActivity.this, Appodeal.INTERSTITIAL);
                             mInterstitialLoaded=false;
-                            //FavoritesFragment favoritesFragment=new FavoritesFragment();
                             bottomNavigationView.setSelectedItemId(R.id.favorites_nav_bottom);
-                            //loadFrag(favoritesFragment, getString(R.string.menu_favorites), fragmentManager);
                         } else {
-                            //FavoritesFragment favoritesFragment=new FavoritesFragment();
                             bottomNavigationView.setSelectedItemId(R.id.favorites_nav_bottom);
-                            //loadFrag(favoritesFragment, getString(R.string.menu_favorites), fragmentManager);
                         }
 
                         return true;
@@ -391,6 +368,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    //admob load
     private void loadBanner() {
         // Create an ad request.
         mAdView = new AdView(this);

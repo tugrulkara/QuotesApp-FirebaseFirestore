@@ -151,6 +151,7 @@ public class AuthorsFragment extends Fragment {
     }
 
 
+    //extract data from the firestore database
     private void authGetData(){
 
         firebaseFirestore.collection("Author")

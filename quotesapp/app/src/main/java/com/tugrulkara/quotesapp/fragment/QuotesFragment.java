@@ -89,7 +89,8 @@ public class QuotesFragment extends Fragment {
 
         setHasOptionsMenu(true);
 
-        Appodeal.initialize(getActivity(), "ee3effe77385b6d328109a32393480096104d245dff12b24", Appodeal.INTERSTITIAL, true);
+        //Appodeal ads install
+        Appodeal.initialize(getActivity(), "addid", Appodeal.INTERSTITIAL, true);
         Appodeal.isLoaded(Appodeal.INTERSTITIAL);
         Appodeal.setInterstitialCallbacks(new InterstitialCallbacks() {
             @Override
@@ -123,6 +124,7 @@ public class QuotesFragment extends Fragment {
             }
         });
 
+        //Admob ads install
         /*AdRequest adRequest = new AdRequest.Builder().build();
 
         //Geçiş_Test: ca-app-pub-3940256099942544/1033173712
@@ -177,7 +179,7 @@ public class QuotesFragment extends Fragment {
             public void onItemClick(int position, View view) {
                 if (mInterstitialLoaded) {
                     //mInterstitialAd.show(getActivity());
-                    Appodeal.show(getActivity(), Appodeal.INTERSTITIAL);
+                    //Appodeal.show(getActivity(), Appodeal.INTERSTITIAL);
                     mInterstitialLoaded=false;
                     Intent intent=new Intent(getActivity().getApplicationContext(), QuotesMakerActivity.class);
                     intent.putExtra("info",quotesList.get(position).getQuote_txt()+"\n"+"\n"+"-"+quotesList.get(position).getAuthor());
@@ -197,7 +199,7 @@ public class QuotesFragment extends Fragment {
             public void onItemClick(int position, View view) {
                 if (mInterstitialLoaded) {
                     //mInterstitialAd.show(getActivity());
-                    Appodeal.show(getActivity(), Appodeal.INTERSTITIAL);
+                    //Appodeal.show(getActivity(), Appodeal.INTERSTITIAL);
                     mInterstitialLoaded=false;
                     Intent intent=new Intent(getActivity().getApplicationContext(), QuotesMakerActivity.class);
                     intent.putExtra("info",quotesList.get(position).getQuote_txt()+"\n"+"\n"+"-"+quotesList.get(position).getAuthor());
@@ -333,6 +335,7 @@ public class QuotesFragment extends Fragment {
     }
 
 
+    //extract data from the firestore database
     private void quotesGetData(){
 
         firebaseFirestore.collection("Quote")

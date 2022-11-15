@@ -110,6 +110,7 @@ public class CategoryFragment extends Fragment {
         }
     }
 
+    //extract data from the firestore database
     private void catGetData(){
 
         firebaseFirestore.collection("Category")

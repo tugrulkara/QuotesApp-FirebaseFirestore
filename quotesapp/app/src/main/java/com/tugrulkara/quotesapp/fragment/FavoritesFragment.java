@@ -1,5 +1,7 @@
 package com.tugrulkara.quotesapp.fragment;
 
+import static android.content.Context.MODE_PRIVATE;
+
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -20,8 +22,6 @@ import com.tugrulkara.quotesapp.adapter.FavoritesAdapter;
 import com.tugrulkara.quotesapp.model.Quote;
 
 import java.util.ArrayList;
-
-import static android.content.Context.MODE_PRIVATE;
 
 
 public class FavoritesFragment extends Fragment {
@@ -83,6 +83,7 @@ public class FavoritesFragment extends Fragment {
 
     }
 
+    //extract data from the local database
     private void getFavData(){
 
         try {
