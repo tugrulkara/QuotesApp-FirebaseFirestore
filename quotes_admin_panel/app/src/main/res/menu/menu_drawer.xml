@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/menu_add_quotes"
+            android:checked="true"
+            android:title="@string/menu_quotes"
+            android:icon="@drawable/quotes"/>
+
+        <item
+            android:id="@+id/menu_add_authors"
+            android:checked="false"
+            android:title="@string/menu_author"
+            android:icon="@drawable/authors"/>
+
+        <item
+            android:id="@+id/menu_add_category"
+            android:checked="false"
+            android:title="@string/menu_category"
+            android:icon="@drawable/category"/>
+        <item
+            android:id="@+id/menu_add_favorites"
+            android:checked="false"
+            android:title="@string/menu_favorites"
+            android:icon="@drawable/favorites"/>
+        <item
+            android:id="@+id/menu_add_images"
+            android:checked="false"
+            android:title="@string/menu_images"
+            android:icon="@android:drawable/ic_menu_upload"/>
+
+        <item
+            android:id="@+id/menu_add_settings"
+            android:checked="false"
+            android:title="@string/menu_settings"
+            android:icon="@drawable/settings"/>
+
+        <item
+            android:id="@+id/menu_go_logout"
+            android:checked="false"
+            android:title="@string/menu_log_out"
+            android:icon="@drawable/logout"/>
+
+    </group>
+</menu>
