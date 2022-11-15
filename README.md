@@ -1,6 +1,6 @@
 ## QuotesApp and Admin Panel-FirebaseFirestore
 
-*This repository contains the source code of a quote application with quotes from famous people.
+*This repository contains the source code of a simple quote application with quotes from famous people.
 This repository contains code samples for Firestore.*
 
 *[Download](https://github.com/tugrulkara/QuotesApp-FirebaseFirestore/releases/tag/2.4) the latest APK* 
@@ -63,6 +63,8 @@ This repository contains code samples for Firestore.*
 *4. [Register your app with Firebase](https://firebase.google.com/docs/android/setup?authuser=0&hl=en#register-app)*
 
 **Move your config file into the module (app-level) root directory of your app. (google-services.json)**
+
+**Note: add it to both the application and the admin panel (google-services.json)**
 
 ![Ekran Alıntısı](https://user-images.githubusercontent.com/74429693/201753476-43b3744e-467a-4c74-bb0a-dfdeb2244721.PNG)
 
