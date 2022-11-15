@@ -1,12 +1,12 @@
-# QuotesApp-FirebaseFirestore
-## Quotes Android App
+# QuotesApp and Admin Panel-FirebaseFirestore
+## Quotes Android App and Admin Panel app
 
 *This repository contains the source code of a quote application with quotes from famous people.
 Provides FirebaseFirestore database usage example.*
 
 *[Download](https://github.com/tugrulkara/QuotesApp-FirebaseFirestore/releases/tag/2.4) the latest APK* 
 
-![ezgif com-gif-maker](https://user-images.githubusercontent.com/74429693/201745230-32d364b4-c6cb-46e2-b399-870d9b71b9e9.gif)
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/74429693/201745230-32d364b4-c6cb-46e2-b399-870d9b71b9e9.gif)  ![ezgif com-gif-maker (2)](https://user-images.githubusercontent.com/74429693/201979684-b1b09f86-5dd8-4aca-a90f-4ddb01e47fc7.gif)
 
 ## Quotes Maker
 
