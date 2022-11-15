@@ -35,7 +35,8 @@ public class SplashActivity extends AppCompatActivity {
         firebaseFirestore=FirebaseFirestore.getInstance();
 
         if (NetworkUtils.isConnected(SplashActivity.this)) {
-            updateController();
+            //updateController();
+            splashScreen();
         } else {
             Snackbar.networkUnavailable(this, v -> NetworkUtils.isConnected(SplashActivity.this));
             //Toast.makeText(SplashActivity.this, getString(R.string.conne_msg1), Toast.LENGTH_SHORT).show();

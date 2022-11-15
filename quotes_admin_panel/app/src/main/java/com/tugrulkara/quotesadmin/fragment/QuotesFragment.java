@@ -36,8 +36,10 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QuerySnapshot;
 import com.tugrulkara.quotesadmin.MainActivity;
@@ -77,6 +79,8 @@ public class QuotesFragment extends Fragment {
 
     String infoAuth=null;
     String infoCat=null;
+
+    TextView textView;
 
     public QuotesFragment() {
         // Required empty public constructor
@@ -136,6 +140,7 @@ public class QuotesFragment extends Fragment {
         recycler_quotes.setLayoutManager(new LinearLayoutManager(getActivity().getApplicationContext()));
         mAdapter=new QuotesAdapter(quotesList,quoteListFull);
         recycler_quotes.setAdapter(mAdapter);
+        textView=view.findViewById(R.id.alertPanel);
 
         fab_add=view.findViewById(R.id.fab_add);
         fab_add.setOnClickListener(new View.OnClickListener() {
@@ -689,16 +694,15 @@ public class QuotesFragment extends Fragment {
     private void quotesGetData(){
 
         firebaseFirestore.collection("Quote")
-                .orderBy("timestamp", Query.Direction.DESCENDING)
-                .get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                .orderBy("timestamp", Query.Direction.DESCENDING).addSnapshotListener(new EventListener<QuerySnapshot>() {
             @Override
-            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+            public void onEvent(@Nullable QuerySnapshot value, @Nullable FirebaseFirestoreException error) {
 
-                if (task.isSuccessful()){
+                if (value != null){
                     quotesList.clear();
                     quoteListFull.clear();
 
-                    for (DocumentSnapshot snapshot : task.getResult()){
+                    for (DocumentSnapshot snapshot : value.getDocuments()){
 
                         Map<String, Object> data = snapshot.getData();
 
@@ -719,14 +723,16 @@ public class QuotesFragment extends Fragment {
                         recycler_quotes.getRecycledViewPool().clear();
                         mAdapter.notifyDataSetChanged();
 
+                        textView.setVisibility(View.INVISIBLE);
+
                     }
                     quoteListFull.addAll(quotesList);
                 }else {
                     Toast.makeText(getActivity(),"Veriler Yüklenemedi",Toast.LENGTH_SHORT).show();
                 }
+
             }
         });
-
 
     }
 

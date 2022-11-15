@@ -13,6 +13,16 @@
         android:layout_height="match_parent"
         android:layout_marginTop="10dp">
 
+        <TextView
+            android:id="@+id/alertPanel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Add an author and a category from the menu. You can add quotes later."
+            android:textAlignment="center"
+            android:textSize="30dp"
+            android:gravity="center_horizontal">
+        </TextView>
+
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fab_up"
             android:layout_width="wrap_content"
