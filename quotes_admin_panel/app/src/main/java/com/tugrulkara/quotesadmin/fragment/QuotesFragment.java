@@ -314,7 +314,7 @@ public class QuotesFragment extends Fragment {
             public void onClick(View v) {
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-                builder.setTitle("Bildir");
+                builder.setTitle("Ekle");
                 builder.setSingleChoiceItems(cat_name_list.toArray(new String[cat_name_list.size()]), -1, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
@@ -344,7 +344,7 @@ public class QuotesFragment extends Fragment {
             public void onClick(View v) {
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-                builder.setTitle("Bildir");
+                builder.setTitle("Ekle");
                 builder.setSingleChoiceItems(auth_name_list.toArray(new String[auth_name_list.size()]), -1, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
@@ -483,7 +483,7 @@ public class QuotesFragment extends Fragment {
             public void onClick(View v) {
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-                builder.setTitle("Bildir");
+                builder.setTitle("Ekle");
                 builder.setSingleChoiceItems(cat_name_list.toArray(new String[cat_name_list.size()]), -1, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
@@ -513,7 +513,7 @@ public class QuotesFragment extends Fragment {
             public void onClick(View v) {
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-                builder.setTitle("Bildir");
+                builder.setTitle("Ekle");
                 builder.setSingleChoiceItems(auth_name_list.toArray(new String[auth_name_list.size()]), -1, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
@@ -699,6 +699,7 @@ public class QuotesFragment extends Fragment {
             public void onEvent(@Nullable QuerySnapshot value, @Nullable FirebaseFirestoreException error) {
 
                 if (value != null){
+
                     quotesList.clear();
                     quoteListFull.clear();
 
@@ -723,7 +724,7 @@ public class QuotesFragment extends Fragment {
                         recycler_quotes.getRecycledViewPool().clear();
                         mAdapter.notifyDataSetChanged();
 
-                        textView.setVisibility(View.INVISIBLE);
+                        textView.setVisibility(View.GONE);
 
                     }
                     quoteListFull.addAll(quotesList);
@@ -746,6 +747,7 @@ public class QuotesFragment extends Fragment {
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
 
                 if (task.isSuccessful()){
+
                     quotesList.clear();
                     quoteListFull.clear();
 
@@ -769,6 +771,8 @@ public class QuotesFragment extends Fragment {
 
                         recycler_quotes.getRecycledViewPool().clear();
                         mAdapter.notifyDataSetChanged();
+
+                        textView.setVisibility(View.GONE);
 
                     }
                     quoteListFull.addAll(quotesList);
@@ -813,6 +817,8 @@ public class QuotesFragment extends Fragment {
 
                         recycler_quotes.getRecycledViewPool().clear();
                         mAdapter.notifyDataSetChanged();
+
+                        textView.setVisibility(View.GONE);
 
                     }
                     quoteListFull.addAll(quotesList);
