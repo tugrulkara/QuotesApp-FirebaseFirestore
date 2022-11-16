@@ -29,21 +29,19 @@ This repository contains code samples for Firestore.*
 
 **create picture quote**
 
-*author and categories*
-
 *search for quotes (searchview)*
 
 *daily notification*
 
 ## Installation
 
-*1. Create a Firebase project*
+### 1. Create a Firebase project
 
-*2. [Enable Email/Password sign-in](https://firebase.google.com/docs/auth/android/password-auth?hl=en&authuser=0#before_you_begin)*
+### 2. [Enable Email/Password sign-in](https://firebase.google.com/docs/auth/android/password-auth?hl=en&authuser=0#before_you_begin)
 
 ![ezgif com-gif-maker (3)](https://user-images.githubusercontent.com/74429693/201983838-b9b82169-dc51-475c-97a4-3097396900e1.gif)
 
-*3. [Create database in FirestoreDatabase](https://firebase.google.com/docs/firestore/quickstart?hl=en&authuser=0#create)*
+### 3. [Create database in FirestoreDatabase](https://firebase.google.com/docs/firestore/quickstart?hl=en&authuser=0#create)
 
 **Cloud Firestore Rules**
 
@@ -61,8 +59,26 @@ service cloud.firestore {
 
 **Cloud Firestore Indexes**
 
+![Ekran Alıntısı](https://user-images.githubusercontent.com/74429693/202220449-78c2af75-e879-4e2c-8399-193837d6f343.PNG)
 
-*4. [Register your app with Firebase](https://firebase.google.com/docs/android/setup?authuser=0&hl=en#register-app)*
+### 4. [Create a default Cloud Storage bucket](https://firebase.google.com/docs/storage/android/start?hl=en&authuser=0#create-default-bucket)
+
+**Storage Rules**
+
+```
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    match /{allPaths=**} {
+      allow read, write: if request.auth != null;
+    }
+  }
+}
+```
+
+### 5. [Register your app with Firebase](https://firebase.google.com/docs/android/setup?authuser=0&hl=en#register-app)
+
+![Ekran Alıntısı2](https://user-images.githubusercontent.com/74429693/202220452-780a87a8-2379-48af-be55-893b744ea8fb.PNG)
 
 **Move your config file into the module (app-level) root directory of your app. (google-services.json)**
 
