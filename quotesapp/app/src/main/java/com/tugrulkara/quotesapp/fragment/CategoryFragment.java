@@ -114,7 +114,7 @@ public class CategoryFragment extends Fragment {
     private void catGetData(){
 
         firebaseFirestore.collection("Category")
-                .orderBy("popular", Query.Direction.ASCENDING)
+                .orderBy("cat_name", Query.Direction.ASCENDING)
                 .get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
