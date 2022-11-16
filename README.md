@@ -13,7 +13,7 @@ This repository contains code samples for Firestore.*
 
 ## Admin Panel App
 
-![ezgif com-gif-maker (2)](https://user-images.githubusercontent.com/74429693/201979684-b1b09f86-5dd8-4aca-a90f-4ddb01e47fc7.gif)
+![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/74429693/202216263-12aebd56-9c60-4a53-a370-a1a4fb010edb.gif)
 
 ## Features
 
@@ -45,20 +45,22 @@ This repository contains code samples for Firestore.*
 
 *3. [Create database in FirestoreDatabase](https://firebase.google.com/docs/firestore/quickstart?hl=en&authuser=0#create)*
 
-**Firestore structure**
+**Cloud Firestore Rules**
 
-![ice_video_20221114-230825(1)](https://user-images.githubusercontent.com/74429693/201757416-ccf14ef9-ccdd-47bc-a28e-f93410eb3c8a.gif)
+```
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /{document=**} {
+      allow write: if request.auth != null ;
+      allow read: if request.auth == null || request.auth != null;
+    }
+  }
+}
+```
 
-**VARIABLES**
+**Cloud Firestore Indexes**
 
-**String:**
-*versionCode, auth_id, auth_name, cat_id, cat_name, popular(category), quote_id, quote_name, image, uuid, quote*
-
-**Timestamp:**
-*timestamp, date*
-
-**Number:**
-*popular(QuoteImageList)*
 
 *4. [Register your app with Firebase](https://firebase.google.com/docs/android/setup?authuser=0&hl=en#register-app)*
 
