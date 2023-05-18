@@ -25,13 +25,13 @@ This repository contains code samples for Firestore.*
 
 ### *- [Sqlite Database](https://developer.android.com/reference/android/database/sqlite/SQLiteDatabase)*
 
-*Alarm Manager, Notification*
+### *- Alarm Manager, Notification*
 
 ### *Third party*
-### *  - [PhotoEditor](https://github.com/burhanrashid52/PhotoEditor/tree/master/app/src/main)*
-### *  - [CircularImageView](https://github.com/lopspower/CircularImageView)*
-### *  - [Snacky](https://github.com/matecode/Snacky)*
-### *  - [DotLoader](https://github.com/bhargavms/DotLoader)*
+### *-  [PhotoEditor](https://github.com/burhanrashid52/PhotoEditor/tree/master/app/src/main)*
+### *-  [CircularImageView](https://github.com/lopspower/CircularImageView)*
+### *-  [Snacky](https://github.com/matecode/Snacky)*
+### *-  [DotLoader](https://github.com/bhargavms/DotLoader)*
 
 ## Features
 
