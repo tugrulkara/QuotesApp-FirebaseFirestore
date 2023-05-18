@@ -17,21 +17,21 @@ This repository contains code samples for Firestore.*
 
 ## Libraries Used
 
-*[Create database in FirestoreDatabase](https://firebase.google.com/)*
-*Firebase Firestore*
-*Firebase Auth*
-*Firebase Storage*
+### *[Firebase](https://firebase.google.com/)*
+*Firebase Firestore,*
+*Firebase Auth,*
+*Firebase Storage,*
 *Firebase Messaging*
 
-*[Sqlite Database](https://developer.android.com/reference/android/database/sqlite/SQLiteDatabase)*
+### *[Sqlite Database](https://developer.android.com/reference/android/database/sqlite/SQLiteDatabase)*
 
 *Alarm Manager, Notification*
 
-### Third party
-#### *[PhotoEditor]([https://firebase.google.com/](https://github.com/burhanrashid52/PhotoEditor/tree/master/app/src/main))*
-#### *[CircularImageView](https://github.com/lopspower/CircularImageView)*
-#### *[Snacky](https://github.com/matecode/Snacky)*
-#### *[DotLoader](https://github.com/bhargavms/DotLoader)*
+#### Third party
+##### *[PhotoEditor](https://github.com/burhanrashid52/PhotoEditor/tree/master/app/src/main)*
+##### *[CircularImageView](https://github.com/lopspower/CircularImageView)*
+##### *[Snacky](https://github.com/matecode/Snacky)*
+##### *[DotLoader](https://github.com/bhargavms/DotLoader)*
 
 ## Features
 
