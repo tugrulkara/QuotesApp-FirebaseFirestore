@@ -17,21 +17,21 @@ This repository contains code samples for Firestore.*
 
 ## Libraries Used
 
-### *[Firebase](https://firebase.google.com/)*
+### *- [Firebase](https://firebase.google.com/)*
 *Firebase Firestore,*
 *Firebase Auth,*
 *Firebase Storage,*
 *Firebase Messaging*
 
-### *[Sqlite Database](https://developer.android.com/reference/android/database/sqlite/SQLiteDatabase)*
+### *- [Sqlite Database](https://developer.android.com/reference/android/database/sqlite/SQLiteDatabase)*
 
 *Alarm Manager, Notification*
 
-#### Third party
-##### *[PhotoEditor](https://github.com/burhanrashid52/PhotoEditor/tree/master/app/src/main)*
-##### *[CircularImageView](https://github.com/lopspower/CircularImageView)*
-##### *[Snacky](https://github.com/matecode/Snacky)*
-##### *[DotLoader](https://github.com/bhargavms/DotLoader)*
+### *Third party*
+### *  - [PhotoEditor](https://github.com/burhanrashid52/PhotoEditor/tree/master/app/src/main)*
+### *  - [CircularImageView](https://github.com/lopspower/CircularImageView)*
+### *  - [Snacky](https://github.com/matecode/Snacky)*
+### *  - [DotLoader](https://github.com/bhargavms/DotLoader)*
 
 ## Features
 
@@ -106,9 +106,3 @@ service firebase.storage {
 
 ## Built With
 This app is developed using Java.
-
-I hope it helps :)
-
-## License
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
