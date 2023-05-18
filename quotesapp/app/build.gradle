@@ -57,23 +57,15 @@ dependencies {
     implementation 'com.google.firebase:firebase-messaging:22.0.0'
     implementation 'com.google.firebase:firebase-analytics:19.0.1'
 
-    //google ads
-    implementation 'com.google.android.gms:play-services-ads:20.4.0'
 
+    //third party
     implementation 'com.github.bhargavms:DotLoader:1.1.1'
     implementation 'com.github.matecode:Snacky:1.1.4'
     implementation 'com.mikhaellopez:circularimageview:3.2.0' // circle image view
-    implementation 'com.github.daoibrahim:AdmobAdvancedNativeRecyclerview:1.0.0'
-
-    //navigation bar
-    implementation 'com.google.android.material:material:1.4.0'
 
     implementation 'com.burhanrashid52:photoeditor:1.1.4'
+
     implementation 'com.squareup.picasso:picasso:2.71828'
-
-    implementation 'com.github.smarteist:autoimageslider:1.4.0'
-
-    implementation 'com.appodeal.ads:sdk:2.11.0.+'
 
 
 }
