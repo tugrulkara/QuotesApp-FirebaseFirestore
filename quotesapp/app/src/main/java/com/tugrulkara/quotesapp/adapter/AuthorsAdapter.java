@@ -60,7 +60,6 @@ public class AuthorsAdapter extends RecyclerView.Adapter<AuthorsAdapter.PostHold
 
         mContext = holder.itemView.getContext();
 
-        //holder.itemView.setBackgroundColor(Color.parseColor(colors[position % 9]));
         holder.cardView.setCardBackgroundColor(Color.parseColor(colors[position % 9]));
 
         if (holder.getAdapterPosition()>last_position){

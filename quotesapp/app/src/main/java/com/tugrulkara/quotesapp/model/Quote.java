@@ -1,7 +1,6 @@
 package com.tugrulkara.quotesapp.model;
 
 public class Quote {
-
     private String quote_id;
     private String quote_txt;
     private String category;

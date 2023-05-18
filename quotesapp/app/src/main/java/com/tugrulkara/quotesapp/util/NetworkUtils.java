@@ -13,20 +13,7 @@ import androidx.annotation.RequiresPermission;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
-/**
- * The type Network utils.
- *
- * @author Nishant Srivastava
- */
 public class NetworkUtils {
-
-    /**
-     * Get the network info
-     *
-     * @param context the context
-     * @return network info
-     */
     @RequiresPermission(permission.ACCESS_NETWORK_STATE)
     private static NetworkInfo getNetworkInfo(Context context) {
         ConnectivityManager cm =
@@ -34,38 +21,17 @@ public class NetworkUtils {
         assert cm != null;
         return cm.getActiveNetworkInfo();
     }
-
-    /**
-     * Check if there is any connectivity
-     *
-     * @param context the context
-     * @return boolean boolean
-     */
     @RequiresPermission(permission.ACCESS_NETWORK_STATE)
     public static boolean isConnected(Context context) {
         NetworkInfo info = getNetworkInfo(context);
         return (info != null && info.isConnected());
     }
-
-    /**
-     * Check if there is fast connectivity
-     *
-     * @param context the context
-     * @return boolean boolean
-     */
     @RequiresPermission(permission.ACCESS_NETWORK_STATE)
     public static boolean isConnectedFast(Context context) {
         NetworkInfo info = getNetworkInfo(context);
         return (info != null && info.isConnected() && isConnectionFast(info.getType(),
                 info.getSubtype()));
     }
-
-    /**
-     * Check if there is any connectivity to a mobile network
-     *
-     * @param context the context
-     * @return boolean boolean
-     */
     @RequiresPermission(permission.ACCESS_NETWORK_STATE)
     public static boolean isConnectedMobile(Context context) {
         NetworkInfo info = getNetworkInfo(context);
@@ -73,26 +39,11 @@ public class NetworkUtils {
                 && info.isConnected()
                 && info.getType() == ConnectivityManager.TYPE_MOBILE);
     }
-
-    /**
-     * Check if there is any connectivity to a Wifi network
-     *
-     * @param context the context
-     * @return boolean boolean
-     */
     @RequiresPermission(permission.ACCESS_NETWORK_STATE)
     public static boolean isConnectedWifi(Context context) {
         NetworkInfo info = getNetworkInfo(context);
         return (info != null && info.isConnected() && info.getType() == ConnectivityManager.TYPE_WIFI);
     }
-
-    /**
-     * Check if the connection is fast
-     *
-     * @param type    the type
-     * @param subType the sub type
-     * @return boolean boolean
-     */
     private static boolean isConnectionFast(int type, int subType) {
         if (type == ConnectivityManager.TYPE_WIFI) {
             return true;

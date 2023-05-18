@@ -1,4 +1,4 @@
-package com.tugrulkara.quotesapp;
+package com.tugrulkara.quotesapp.view;
 
 import android.app.AlarmManager;
 import android.app.PendingIntent;
@@ -15,6 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.cardview.widget.CardView;
 
+import com.tugrulkara.quotesapp.R;
 import com.tugrulkara.quotesapp.util.AlarmReceiver;
 import com.tugrulkara.quotesapp.util.Setting;
 

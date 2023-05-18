@@ -1,4 +1,4 @@
-package com.tugrulkara.quotesapp;
+package com.tugrulkara.quotesapp.view;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -15,6 +15,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.squareup.picasso.Picasso;
+import com.tugrulkara.quotesapp.R;
 import com.tugrulkara.quotesapp.util.NetworkUtils;
 import com.tugrulkara.quotesapp.util.Setting;
 import com.tugrulkara.quotesapp.util.Snackbar;
@@ -39,7 +40,6 @@ public class SplashActivity extends AppCompatActivity {
             splashScreen();
         } else {
             Snackbar.networkUnavailable(this, v -> NetworkUtils.isConnected(SplashActivity.this));
-            //Toast.makeText(SplashActivity.this, getString(R.string.conne_msg1), Toast.LENGTH_SHORT).show();
         }
     }
 

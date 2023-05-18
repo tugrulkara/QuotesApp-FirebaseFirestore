@@ -1,4 +1,4 @@
-package com.tugrulkara.quotesapp.fragment;
+package com.tugrulkara.quotesapp.view.fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,8 +15,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.SearchView;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
@@ -27,8 +25,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
-import com.tugrulkara.quotesapp.FilterQuotesActivity;
-import com.tugrulkara.quotesapp.MainActivity;
+import com.tugrulkara.quotesapp.view.FilterQuotesActivity;
 import com.tugrulkara.quotesapp.R;
 import com.tugrulkara.quotesapp.adapter.AuthorsAdapter;
 import com.tugrulkara.quotesapp.model.Author;
@@ -94,33 +91,6 @@ public class AuthorsFragment extends Fragment {
             }
         });
 
-    }
-
-    public static QuotesFragment newInstance(String data) {
-        QuotesFragment quotesFragment = new QuotesFragment();
-        Bundle bundle = new Bundle();
-        bundle.putSerializable("infoAuth", data);
-        quotesFragment.setArguments(bundle);
-        return quotesFragment;
-    }
-
-    public void loadFrag(Fragment f1, String name, FragmentManager fm,String title) {
-        for (int i = 0; i < fm.getBackStackEntryCount(); ++i) {
-            fm.popBackStack();
-        }
-        FragmentTransaction ft = fm.beginTransaction();
-        ft.replace(R.id.Container, f1, name);
-        ft.addToBackStack(null);
-        ft.commit();
-        setToolbarTitle(title);
-    }
-
-    public void setToolbarTitle(String Title) {
-
-        if (((MainActivity)getActivity()).getSupportActionBar() != null) {
-
-            ((MainActivity)getActivity()).getSupportActionBar().setTitle(Title);
-        }
     }
 
     @Override

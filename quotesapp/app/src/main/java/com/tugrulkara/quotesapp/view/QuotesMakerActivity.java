@@ -1,4 +1,4 @@
-package com.tugrulkara.quotesapp;
+package com.tugrulkara.quotesapp.view;
 
 import static android.content.pm.PackageManager.PERMISSION_GRANTED;
 import static com.tugrulkara.quotesapp.util.FileSaveHelper.isSdkHigherThan28;
@@ -22,19 +22,6 @@ import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.appodeal.ads.Appodeal;
-import com.appodeal.ads.RewardedVideoCallbacks;
-import com.google.android.gms.ads.AdError;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.FullScreenContentCallback;
-import com.google.android.gms.ads.LoadAdError;
-import com.google.android.gms.ads.MobileAds;
-import com.google.android.gms.ads.OnUserEarnedRewardListener;
-import com.google.android.gms.ads.initialization.InitializationStatus;
-import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
-import com.google.android.gms.ads.rewarded.RewardItem;
-import com.google.android.gms.ads.rewarded.RewardedAd;
-import com.google.android.gms.ads.rewarded.RewardedAdLoadCallback;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -42,6 +29,7 @@ import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 import com.squareup.picasso.Picasso;
+import com.tugrulkara.quotesapp.R;
 import com.tugrulkara.quotesapp.adapter.ImageListAdapter;
 import com.tugrulkara.quotesapp.base.BaseActivity;
 import com.tugrulkara.quotesapp.util.FileSaveHelper;
@@ -66,15 +54,8 @@ public class QuotesMakerActivity extends BaseActivity {
     private ArrayList<String> array_image;
     private ImageListAdapter mAdapter;
     private FirebaseFirestore firebaseFirestore;
-
-    private boolean rewardLoadAppodial=false;
-
-    private RewardedAd mRewardedAd;
-
     private Toolbar toolbar;
-
     private FileSaveHelper mSaveFileHelper;
-
     private Uri mSaveImageUri;
     private static final int CAMERA_REQUEST = 52;
     private static final int PICK_REQUEST = 53;
@@ -83,50 +64,6 @@ public class QuotesMakerActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quotes_maker);
-
-
-        //appodeal ads install
-        Appodeal.initialize(this, "adsid", Appodeal.REWARDED_VIDEO, true);
-        Appodeal.isLoaded(Appodeal.REWARDED_VIDEO);
-        Appodeal.setRewardedVideoCallbacks(new RewardedVideoCallbacks() {
-            @Override
-            public void onRewardedVideoLoaded(boolean isPrecache) {
-                // Called when rewarded video is loaded
-                System.out.println("reklam yüklendi");
-            }
-            @Override
-            public void onRewardedVideoFailedToLoad() {
-                // Called when rewarded video failed to load
-                System.out.println("reklam yüklenemedi");
-                Appodeal.isLoaded(Appodeal.REWARDED_VIDEO);
-            }
-            @Override
-            public void onRewardedVideoShown() {
-                // Called when rewarded video is shown
-            }
-            @Override
-            public void onRewardedVideoShowFailed() {
-                // Called when rewarded video show failed
-                Appodeal.isLoaded(Appodeal.REWARDED_VIDEO);
-            }
-            @Override
-            public void onRewardedVideoClicked() {
-                // Called when rewarded video is clicked
-            }
-            @Override
-            public void onRewardedVideoFinished(double amount, String name) {
-                // Called when rewarded video is viewed until the end
-                saveImage();
-            }
-            @Override
-            public void onRewardedVideoClosed(boolean finished) {
-                // Called when rewarded video is closed
-            }
-            @Override
-            public void onRewardedVideoExpired() {
-                // Called when rewarded video is expired
-            }
-        });
 
         firebaseFirestore=FirebaseFirestore.getInstance();
 
@@ -160,12 +97,6 @@ public class QuotesMakerActivity extends BaseActivity {
         mAdapter=new ImageListAdapter(array_image);
         recyclerView.setAdapter(mAdapter);
 
-        MobileAds.initialize(this, new OnInitializationCompleteListener() {
-            @Override
-            public void onInitializationComplete(InitializationStatus initializationStatus) {
-                //loadAd();
-            }
-        });
 
         Typeface mTextTypeFace = Typeface.createFromAsset(getAssets(), "OpenSans-ExtraBold.ttf");
 
@@ -208,8 +139,6 @@ public class QuotesMakerActivity extends BaseActivity {
         btn_save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //showReward();
-                //Appodeal.show(QuotesMakerActivity.this, Appodeal.REWARDED_VIDEO);
                 saveImage();
             }
         });
@@ -393,69 +322,4 @@ public class QuotesMakerActivity extends BaseActivity {
             requestPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE);
         }
     }
-
-
-    //ADMOB REWARDED
-    private void loadAd(){
-
-        AdRequest adRequest = new AdRequest.Builder().build();
-        RewardedAd.load(this, getString(R.string.testReward),
-                adRequest, new RewardedAdLoadCallback() {
-                    @Override
-                    public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
-                        System.out.println(loadAdError.getMessage());
-                        mRewardedAd = null;
-                    }
-
-                    @Override
-                    public void onAdLoaded(@NonNull RewardedAd rewardedAd) {
-                        mRewardedAd = rewardedAd;
-                        System.out.println("Ad was loaded.");
-
-                        mRewardedAd.setFullScreenContentCallback(new FullScreenContentCallback() {
-                            @Override
-                            public void onAdShowedFullScreenContent() {
-                                // Called when ad is shown.
-                                System.out.println("Ad was shown.");
-                            }
-
-                            @Override
-                            public void onAdFailedToShowFullScreenContent(AdError adError) {
-                                // Called when ad fails to show.
-                                System.out.println("Ad failed to show.");
-
-                            }
-
-                            @Override
-                            public void onAdDismissedFullScreenContent() {
-                                // Called when ad is dismissed.
-                                // Set the ad reference to null so you don't show the ad a second time.
-                                loadAd();
-                                System.out.println("Ad was dismissed.");
-                            }
-                        });
-                    }
-                });
-    }
-
-    private void showReward(){
-
-        if (mRewardedAd != null) {
-            mRewardedAd.show(QuotesMakerActivity.this, new OnUserEarnedRewardListener() {
-                @Override
-                public void onUserEarnedReward(@NonNull RewardItem rewardItem) {
-                    //int rewardAmount = rewardItem.getAmount();
-                    //String rewardType = rewardItem.getType();
-                    System.out.println("The user earned the reward");
-                    saveImage();
-                }
-            });
-        } else {
-            System.out.println("The rewarded ad wasn't ready yet.");
-            Toast.makeText(QuotesMakerActivity.this,"İnternet Bağlantınızı Kontrol edin!",Toast.LENGTH_LONG).show();
-        }
-
-    }
-
-
 }

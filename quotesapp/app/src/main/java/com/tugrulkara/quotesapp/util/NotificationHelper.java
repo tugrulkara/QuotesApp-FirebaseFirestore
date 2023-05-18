@@ -1,4 +1,4 @@
-package com.tugrulkara.quotesapp;
+package com.tugrulkara.quotesapp.util;
 
 import android.annotation.TargetApi;
 import android.app.NotificationChannel;
@@ -14,6 +14,8 @@ import android.os.Build;
 
 import androidx.core.app.NotificationCompat;
 
+import com.tugrulkara.quotesapp.R;
+import com.tugrulkara.quotesapp.view.SplashActivity;
 import com.tugrulkara.quotesapp.model.Quote;
 
 import java.util.List;

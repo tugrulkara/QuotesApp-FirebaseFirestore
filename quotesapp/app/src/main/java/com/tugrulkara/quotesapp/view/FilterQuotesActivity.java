@@ -1,4 +1,4 @@
-package com.tugrulkara.quotesapp;
+package com.tugrulkara.quotesapp.view;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -21,6 +21,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
+import com.tugrulkara.quotesapp.R;
 import com.tugrulkara.quotesapp.adapter.FilterQuotesAdapter;
 import com.tugrulkara.quotesapp.model.Quote;
 

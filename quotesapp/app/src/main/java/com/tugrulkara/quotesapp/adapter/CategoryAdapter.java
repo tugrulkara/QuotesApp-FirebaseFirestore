@@ -46,7 +46,6 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.PostHo
     @Override
     public void onBindViewHolder(@NonNull PostHolder holder, int position) {
 
-        //holder.itemView.setBackgroundColor(Color.parseColor(colors[position % 9]));
         holder.cardView.setCardBackgroundColor(Color.parseColor(colors[position % 9]));
 
         holder.txt_item.setText(catList.get(position).getCat_name());

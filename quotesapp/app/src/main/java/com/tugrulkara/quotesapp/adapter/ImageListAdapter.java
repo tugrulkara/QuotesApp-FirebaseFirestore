@@ -44,7 +44,6 @@ public class ImageListAdapter extends RecyclerView.Adapter<ImageListAdapter.Post
     @Override
     public void onBindViewHolder(@NonNull PostHolder holder, int position) {
 
-        //holder.imageView.setImageResource(array_image.get(position));
 
         if (array_image.size()<=0){
             Toast.makeText(holder.itemView.getContext(),"Veriler Yüklenemedi! İnternet bağlantınızı kontrol edin veya uygulamayı yeniden başlatın!",Toast.LENGTH_LONG).show();

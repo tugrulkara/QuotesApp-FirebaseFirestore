@@ -1,4 +1,4 @@
-package com.tugrulkara.quotesapp;
+package com.tugrulkara.quotesapp.view;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -21,9 +21,9 @@ import androidx.fragment.app.DialogFragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-/**
- * Created by Burhanuddin Rashid on 1/16/2018.
- */
+import com.tugrulkara.quotesapp.R;
+import com.tugrulkara.quotesapp.adapter.ColorPickerAdapter;
+
 
 public class TextEditorDialogFragment extends DialogFragment {
 

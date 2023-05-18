@@ -61,7 +61,6 @@ public class FavoritesAdapter extends RecyclerView.Adapter<FavoritesAdapter.Post
 
         mContext = holder.itemView.getContext();
 
-        //holder.cardView.setBackgroundColor(Color.parseColor(colors[position % 9]));
         holder.cardView.setCardBackgroundColor(Color.parseColor(colors[position % 9]));
 
         favQuoteIdlist=new ArrayList<>();

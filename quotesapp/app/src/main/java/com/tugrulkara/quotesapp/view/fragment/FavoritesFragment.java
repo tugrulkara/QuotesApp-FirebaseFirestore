@@ -1,4 +1,4 @@
-package com.tugrulkara.quotesapp.fragment;
+package com.tugrulkara.quotesapp.view.fragment;
 
 import static android.content.Context.MODE_PRIVATE;
 
@@ -16,7 +16,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.tugrulkara.quotesapp.QuotesMakerActivity;
+import com.tugrulkara.quotesapp.view.QuotesMakerActivity;
 import com.tugrulkara.quotesapp.R;
 import com.tugrulkara.quotesapp.adapter.FavoritesAdapter;
 import com.tugrulkara.quotesapp.model.Quote;

@@ -1,4 +1,4 @@
-package com.tugrulkara.quotesapp;
+package com.tugrulkara.quotesapp.adapter;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -15,12 +15,10 @@ import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.tugrulkara.quotesapp.R;
+
 import java.util.ArrayList;
 import java.util.List;
-
-/**
- * Created by Ahmed Adel on 5/8/17.
- */
 
 public class ColorPickerAdapter extends RecyclerView.Adapter<ColorPickerAdapter.ViewHolder> {
 
@@ -35,7 +33,7 @@ public class ColorPickerAdapter extends RecyclerView.Adapter<ColorPickerAdapter.
         this.colorPickerColors = colorPickerColors;
     }
 
-    ColorPickerAdapter(@NonNull Context context) {
+    public ColorPickerAdapter(@NonNull Context context) {
         this(context, getDefaultColors(context));
         this.context = context;
         this.inflater = LayoutInflater.from(context);
