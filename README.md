@@ -15,6 +15,24 @@ This repository contains code samples for Firestore.*
 
 ![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/74429693/202216263-12aebd56-9c60-4a53-a370-a1a4fb010edb.gif)
 
+## Libraries Used
+
+*[Create database in FirestoreDatabase](https://firebase.google.com/)*
+*Firebase Firestore*
+*Firebase Auth*
+*Firebase Storage*
+*Firebase Messaging*
+
+*[Sqlite Database](https://developer.android.com/reference/android/database/sqlite/SQLiteDatabase)*
+
+*Alarm Manager, Notification*
+
+### Third party
+#### *[PhotoEditor]([https://firebase.google.com/](https://github.com/burhanrashid52/PhotoEditor/tree/master/app/src/main))*
+#### *[CircularImageView](https://github.com/lopspower/CircularImageView)*
+#### *[Snacky](https://github.com/matecode/Snacky)*
+#### *[DotLoader](https://github.com/bhargavms/DotLoader)*
+
 ## Features
 
 *CRUD author-category-quote*
