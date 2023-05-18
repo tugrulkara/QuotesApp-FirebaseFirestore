@@ -16,7 +16,7 @@
         <TextView
             android:id="@+id/alertPanel"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:text="Add an author and a category from the menu. You can add quotes later."
             android:textAlignment="center"
             android:textSize="30dp"

@@ -728,6 +728,7 @@ public class QuotesFragment extends Fragment {
 
                     }
                     quoteListFull.addAll(quotesList);
+                    textView.setVisibility(View.GONE);
                 }else {
                     Toast.makeText(getActivity(),"Veriler Yüklenemedi",Toast.LENGTH_SHORT).show();
                 }
