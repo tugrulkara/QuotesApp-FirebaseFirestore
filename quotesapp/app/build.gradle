@@ -56,8 +56,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-firestore:23.0.3'
     implementation 'com.google.firebase:firebase-messaging:22.0.0'
     implementation 'com.google.firebase:firebase-analytics:19.0.1'
-
-
+    
     //third party
     implementation 'com.github.bhargavms:DotLoader:1.1.1'
     implementation 'com.github.matecode:Snacky:1.1.4'
