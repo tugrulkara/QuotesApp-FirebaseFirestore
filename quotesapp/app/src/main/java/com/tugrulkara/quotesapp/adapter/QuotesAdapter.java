@@ -55,9 +55,6 @@ public class QuotesAdapter extends RecyclerView.Adapter<QuotesAdapter.PostHolder
 
     private String[] colors={"#e1798f","#b786a4","#efad73","#f08a99","#a3bdd4","#c38080","#80ca9f","#89b8b3","#fe8f8c"};
 
-    //int AD_TYPE = 0;
-    //int CONTENT_TYPE = 1;
-
     private List<Quote> quotesList;
     private List<Quote> quoteListFull;
     private ArrayList<String> favQuoteIdList;
@@ -76,36 +73,8 @@ public class QuotesAdapter extends RecyclerView.Adapter<QuotesAdapter.PostHolder
     @Override
     public PostHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-        //AdView adview;
         PostHolder holder;
 
-        /*if (viewType == AD_TYPE) {
-
-            adview = new AdView(parent.getContext());
-            adview.setAdSize(AdSize.LARGE_BANNER);
-
-            // this is the good adview
-            MobileAds.initialize(parent.getContext());
-
-            //Banner_Test: ca-app-pub-3940256099942544/6300978111
-
-            adview.setAdUnitId("ca-app-pub-3940256099942544/6300978111");
-
-            float density = parent.getContext().getResources().getDisplayMetrics().density;
-            int height = Math.round(110 * density);
-            AbsListView.LayoutParams params = new AbsListView.LayoutParams(AbsListView.LayoutParams.FILL_PARENT, height);
-            adview.setLayoutParams(params);
-
-            // dont use below if testing on a device
-            // follow https://developers.google.com/admob/android/quick-start?hl=en to setup testing device
-            AdRequest request = new AdRequest.Builder().build();
-            adview.loadAd(request);
-            holder = new PostHolder(adview);
-
-        } else {
-            View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_all_quotes, parent, false);
-            holder = new PostHolder(v);
-        }*/
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_all_quotes, parent, false);
         holder = new PostHolder(v);
         return holder;
@@ -115,11 +84,6 @@ public class QuotesAdapter extends RecyclerView.Adapter<QuotesAdapter.PostHolder
     @Override
     public void onBindViewHolder(@NonNull PostHolder holder, int position) {
 
-        //if (position % 6 != 3) {
-
-            //mContext = holder.itemView.getContext();
-
-            //holder.itemView.setBackgroundColor(Color.parseColor(colors[position % 9]));
             holder.cardView.setCardBackgroundColor(Color.parseColor(colors[position % 9]));
 
             if (holder.getAdapterPosition()>last_position){
@@ -214,16 +178,7 @@ public class QuotesAdapter extends RecyclerView.Adapter<QuotesAdapter.PostHolder
                 }
             });
 
-        //}
-
     }
-
-   /* @Override
-    public int getItemViewType(int position) {
-        if (position % 6 == 3)
-            return AD_TYPE;
-        return CONTENT_TYPE;
-    }*/
 
     @Override
     public int getItemCount() {
