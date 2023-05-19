@@ -1,55 +1,48 @@
-## QuotesApp and Admin Panel-FirebaseFirestore
+## QuotesApp and Admin Panel
 
-*This repository contains the source code of a simple quote application with quotes from famous people.
-This repository contains code samples for Firestore.*
+This repository contains the source code of a simple quote application with quotes from famous people. This repository contains code samples for Firestore.
 
-*[Download](https://github.com/tugrulkara/QuotesApp-FirebaseFirestore/releases/tag/2.4) the latest APK* 
+*[Download](https://github.com/tugrulkara/QuotesApp-FirebaseFirestore/releases/tag/2.4) the latest APK*
 
-![ezgif com-gif-maker](https://user-images.githubusercontent.com/74429693/201745230-32d364b4-c6cb-46e2-b399-870d9b71b9e9.gif)
+<table>
+  <tr>
+    <td>QuotesApp</td>
+     <td>Quotes Maker Screen</td>
+     <td>Admin Panel</td>
+  </tr>
+  <tr>
+    <td><img src="https://user-images.githubusercontent.com/74429693/201745230-32d364b4-c6cb-46e2-b399-870d9b71b9e9.gif" width=270 height=480></td>
+    <td><img src="https://user-images.githubusercontent.com/74429693/201746478-3767ed54-2989-486e-a23a-584828b3cf91.gif" width=270 height=480></td>
+    <td><img src="https://user-images.githubusercontent.com/74429693/202216263-12aebd56-9c60-4a53-a370-a1a4fb010edb.gif" width=270 height=480></td>
+  </tr>
+ </table>
+ 
+ ## Libraries Used
 
-## Quotes Maker
-
-![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/74429693/201746478-3767ed54-2989-486e-a23a-584828b3cf91.gif)
-
-## Admin Panel App
-
-![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/74429693/202216263-12aebd56-9c60-4a53-a370-a1a4fb010edb.gif)
-
-## Libraries Used
-
-### *- [Firebase](https://firebase.google.com/)*
-*Firebase Firestore,*
-*Firebase Auth,*
-*Firebase Storage,*
-*Firebase Messaging*
-
-### *- [Sqlite Database](https://developer.android.com/reference/android/database/sqlite/SQLiteDatabase)*
-
-### *- Alarm Manager, Notification*
-
-### *Third party*
-### *-  [PhotoEditor](https://github.com/burhanrashid52/PhotoEditor/tree/master/app/src/main)*
-### *-  [CircularImageView](https://github.com/lopspower/CircularImageView)*
-### *-  [Snacky](https://github.com/matecode/Snacky)*
-### *-  [DotLoader](https://github.com/bhargavms/DotLoader)*
+* [Firebase](https://firebase.google.com/)
+  * Firebase Firestore
+  * Firebase Auth
+  * Firebase Storage
+  * Firebase Messaging
+* [SqLite](https://developer.android.com/reference/android/database/sqlite/SQLiteDatabase)
+* Alarm Manager
+* Notification
+* [Third party]()
+  * [PhotoEditor](https://github.com/burhanrashid52/PhotoEditor/tree/master/app/src/main)
+  * [CircularImageView](https://github.com/lopspower/CircularImageView)
+  * [Snacky](https://github.com/matecode/Snacky)
+  * [DotLoader](https://github.com/bhargavms/DotLoader)
 
 ## Features
 
-*CRUD author-category-quote*
-
-*Firebase Messaging-Notification*
-
-*add quotes to favorites*
-
-*share quotes*
-
-*quote of the day*
-
-**create picture quote**
-
-*search for quotes (searchview)*
-
-*daily notification*
+* CRUD author-category-quote
+* Firebase Messaging-Notification
+* add quotes to favorites
+* share quotes
+* quote of the day
+* create picture quote
+* search for quotes (searchview)
+* daily notification
 
 ## Installation
 
