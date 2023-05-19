@@ -27,7 +27,7 @@ This repository contains the source code of a simple quote application with quot
 * [SqLite](https://developer.android.com/reference/android/database/sqlite/SQLiteDatabase)
 * Alarm Manager
 * Notification
-* [Third party]()
+* **Third party**
   * [PhotoEditor](https://github.com/burhanrashid52/PhotoEditor/tree/master/app/src/main)
   * [CircularImageView](https://github.com/lopspower/CircularImageView)
   * [Snacky](https://github.com/matecode/Snacky)
